@@ -3,16 +3,21 @@ Date: 9/7/2017
 
 var strx = 6;   //shooting moon x
 var stry = 385; //shooting moon y
-
-
+var str2x= 411; //meteor x
+var str2y= 0; //meteor y
 
 draw = function() {
     strx +=1;//moving moon x
     stry -=1;//moving moon y
+    str2x -=3;//moving meteor x
+    str2y +=4;//moving meteor y
     
     //initializing background
     background(29, 40, 115);
     
+    //Making of meteor
+    fill(74, 74, 66);
+    ellipse(str2x, str2y, 20, 20);        //Meteor
     //Making of moon
     fill(209, 209, 202);
     ellipse(strx, stry, 60, 60);        //Moon
@@ -68,6 +73,10 @@ draw = function() {
     ellipse(70, 98, 10, 10);   //star
     ellipse(105, 229, 10, 10);   //star
 };
+
+
+
+
 
 
 
